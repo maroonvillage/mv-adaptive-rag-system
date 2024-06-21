@@ -17,7 +17,7 @@ local_llm = "llama2"
 run_local = "Yes"
 
 
-os.environ['TAVILY_API_KEY'] = "[YOUR API KEY HERE]"
+os.environ['TAVILY_API_KEY'] = "[ADD YOUR API KEY HERE]"
 
 
 # Instantiate your RAG system once (outside the route handlers)

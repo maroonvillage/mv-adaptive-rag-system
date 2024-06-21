@@ -4,7 +4,7 @@ from langchain.schema import Document
 from pprint import pprint
 
 from documents import get_documents, split_docs
-from vectorize import add_to_vectorstore
+from vectorize import add_to_vectorstore_client
 from llms import get_router
 from llms import get_retreival_grader
 from llms import get_generation
@@ -26,7 +26,7 @@ class RAGSystem:
 
         self.pdf_array = get_documents()
         self.list_of_docs = split_docs(self.pdf_array)
-        self.retriever = add_to_vectorstore(self.list_of_docs)
+        self.retriever = add_to_vectorstore_client(self.list_of_docs)
 
         #LLMs
         self.question_router = get_router(self.llm)

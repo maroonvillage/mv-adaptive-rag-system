@@ -26,8 +26,8 @@ COPY /pdfs/*.pdf /app/pdfs
 
 
 # Expose the port your FastAPI app will run on
-EXPOSE 8000
-EXPOSE 11434
+EXPOSE 8005
+#EXPOSE 11434
 
 # Command to run the FastAPI app
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8005"]
